@@ -1,29 +1,46 @@
 from Classes import *
+import os
 
-
+toDo = ToDoList()
 
 def main():
     
-    while True:
+    sair = False
+    while sair == False:
         try:
 
-            print("Bem Vindo(a) a sua ToDoList! \n\n O que deseja realizar? \n\n [1] Adicionar Tarefa \n [2] Excluir Tarefa \n [3] Listar tarefas \n [4] Sair \n")
+            print("Bem Vindo(a) a sua ToDoList! \n\n O que deseja realizar? \n\n [1] Adicionar Tarefa \n [2] Excluir Tarefa \n [3] Listar tarefas \n [0] Sair \n")
             menu = int(input(">> "))
 
 
             match menu:
 
                 case 1:
-                    pass
+                    os.system("cls")
+                    print("Você está prestes a adicionar uma nova tarefa!")
+                    toDo.adicionar_tarefa()
+                    os.system("pause")
+                    os.system("cls")
 
                 case 2:
-                    pass
+                    os.system("cls")
+                    print("Você está prestes a excluir uma tarefa!")
+                    toDo.listar_tarefas()
+                    toDo.excluir_tarefa()
+                    os.system("pause")
+                    os.system("cls")
 
                 case 3:
-                    pass
+                    os.system("cls")
+                    print("Tarefas:")
+                    toDo.listar_tarefas()
+                    os.system("pause")
+                    os.system("cls")
 
-                case 4:
-                    pass
+                case 0:
+                    print("SAINDO...")
+                    print("---------")
+                    sair = True
 
                 case _:
                     print("Valor Inválido.")
