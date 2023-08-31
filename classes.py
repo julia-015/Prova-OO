@@ -14,7 +14,5 @@ class ToDoList():
     def excluir_tarefa(self, indice):
         self.indice = indice
 
-        self.indice = input("Digite qual tarefa deseja excluir >> ")
-
     def listar_tarefas(self):
         self.tarefas.items()

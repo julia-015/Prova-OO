@@ -3,6 +3,13 @@ import os
 
 toDo = ToDoList()
 
+def cancelar_tarefa():
+    exc = input("Digite qual tarefa deseja excluir >> ")
+    if toDo.excluir_tarefa(exc):
+        print(f"Tarefa {exc} foi excluida.")
+    else:
+        print(f"Não foi encontrada essa tarefa {exc}.")
+
 def main():
     
     sair = False
